@@ -13,7 +13,7 @@ Motion Capture:
  Desenvolvimento Web:
   - Adianti, Flask, Django
 
-Python, Java, C++, GML.
+Python, Java, C++, GML, C#.
 
 ### Interesses
 - Desenvolvimento de Jogos
