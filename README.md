@@ -1,6 +1,6 @@
 # Sobre Mim
 
-Meu nome é Marcos Castelo tenho 18 anos sou estudante de ADS e não tenho um milhão :(
+Meu nome é Marcos Castelo tenho 18 anos sou estudante de ADS e não tenho um milhão e quarenta e dois mil de patrimônio acumulado :(
 - marcosvitorcastelo@gmail.com
 
 ### Habilidades
