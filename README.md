@@ -2,7 +2,7 @@
 
 Meu nome é Marcos Castelo tenho 18 anos sou estudante de ADS e não tenho um milhão :(
 
-### Competências
+### Habilidades
 
 Desenvolvimento de jogos: 
  - Unity, Unreal, GameMaker
