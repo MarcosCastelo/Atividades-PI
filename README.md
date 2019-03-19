@@ -1,6 +1,3 @@
-# Atividades-PI
-Repositório destinado as atividades de Programação para Internet do curso de ADS módulo III
-
 ##Sobre mim
 Marcos Vitor Castelo Branco Nunes
 marcosvitorcastelo@gmail.com# Sobre Mim
