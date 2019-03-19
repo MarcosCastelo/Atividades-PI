@@ -5,18 +5,15 @@ Meu nome é Marcos Castelo tenho 18 anos sou estudante de ADS e não tenho um mi
 ### Competências
 
 Desenvolvimento de jogos: 
- - Unity 
- - Unreal
- - GameMaker
+ - Unity, Unreal, GameMaker
 
 Motion Capture:
+ - Kinect, Myo, EMG
+ 
+ Desenvolvimento Web:
+  - Adianti, Flask, Django
 
-
- - Kinect
- - Myo
- - EMG
-
-Python, Java, C++.
+Python, Java, C++, GML.
 
 ### Interesses
 - Desenvolvimento de Jogos
