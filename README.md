@@ -1,20 +1,20 @@
 # Sobre Mim
 
-Meu nome é Marco<b>s</b> Castelo tenho 18 anos sou estudante de ADS e não tenho um milhão e quarenta e d<b>o</b>is mil de patrimônio acumulado :weary:
+Meu nome é Marco<strike>s</strike> Castelo tenho 18 anos sou estudante de ADS e não tenho um milhão e quarenta e d<strike>o</strike>is mil de patrimônio acumulado :weary:
 
-:envelope: mar<b>c</b>osvitorcastelo@gmail.com
+:envelope: mar<strike>c</strike>osvitorcastelo@gmail.com
 
 
 ### Habilidades
 
-Desenvolvimento de j<b>o</b>gos: 
- - Unity, Unreal, GameMake<b>r</b>
+Desenvolvimento de j<strike>o</strike>gos: 
+ - Unity, Unreal, GameMake<strike>r</strike>
 
-Motion Captu<b>r</b>e:
+Motion Captu<strike>r</strike>e:
  - Kinect, Myo, EMG
  
  Desenvolvimento Web:
-  - Adianti, Flask, Djang<b>o</b>
+  - Adianti, Flask, Djang<strike>o</strike>
 
 Python, Java, C++, GML, C#.
 
