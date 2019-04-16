@@ -9,6 +9,7 @@ class Request:
         self.content = None
         response = None
         try:
+            requests_cache.install_cache('pages_cache')
             response = requests.get(url)
         except:
             pass

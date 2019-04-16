@@ -1,8 +1,6 @@
-from request import *
-from traveler import *
+from search import Search
 
-r = Request("https://www.google.com.br/intl/pt-BR/policies/privacy/")
-t = Traveler()
-
-t.travel(r,1)
-print(t.content.keys())
+s = Search("Governo", "https://uol.com.br", 1)
+s.search()
+for key in s.results.keys():
+    print(key, s.results[key])
