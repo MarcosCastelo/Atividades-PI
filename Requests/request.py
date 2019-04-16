@@ -20,22 +20,24 @@ class Request:
     
 
     def isValidated(self):
-        if self.response != None:
+        if self.response != None and self.content != None:
             return True
             
         return False
 
 
     def getLinks(self, onlyBody=True):
-        soup = BeautifulSoup(self.content, 'html.parser')
-        links = []
-        if onlyBody:
-            for link in soup.body.find_all('a'):
-                links.append(link['href'])
-            return links
+        if self.isValidated():
+            soup = BeautifulSoup(self.content, 'html.parser')
+            links = []
 
-        for link in soup.find_all('a'):
-            links.append(link['href'])
+            for link in soup.find_all('a'):
+                if link.has_attr('href'):
+                    links.append(link['href'])
+
+            return links
+        else:
+            return None
 
 
     def getContent(self):

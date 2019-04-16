@@ -1,8 +1,8 @@
 from request import *
 from traveler import *
 
-r = Request("https://google.com")
-t = Traveler(r)
+r = Request("https://www.google.com.br/intl/pt-BR/policies/privacy/")
+t = Traveler()
 
-t.travel()
+t.travel(r,1)
 print(t.content.keys())
