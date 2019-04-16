@@ -11,11 +11,12 @@ class Request:
         try:
             response = requests.get(url)
         except:
-            raise
-        if response.status_code == 200:
-            self.url = url
-            self.response = response
-            self.content = response.content
+            pass
+        if response != None:
+            if response.status_code == 200:
+                self.url = url
+                self.response = response
+                self.content = response.content
     
 
     def isValidated(self):
@@ -26,7 +27,7 @@ class Request:
 
 
     def getLinks(self, onlyBody=True):
-        soup = BeautifulSoup(self.content, 'html_parser')
+        soup = BeautifulSoup(self.content, 'html.parser')
         links = []
         if onlyBody:
             for link in soup.body.find_all('a'):
@@ -39,3 +40,6 @@ class Request:
 
     def getContent(self):
         return self.content
+
+    def getUrl(self):
+        return self.url
