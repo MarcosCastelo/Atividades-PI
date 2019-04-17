@@ -21,7 +21,7 @@ class Search:
                 if key.content != None: 
                     result = self.find_key(key.content)
                     if result != [] and result != None:
-                        self.results.append({key.url : self.find_key(key.content)})
+                        self.results.update({key.url : result})
 
         else:
             print("Fora do ar")
@@ -29,7 +29,7 @@ class Search:
 
         
     def find_key(self, content):
-        soup = BeautifulSoup(content, 'html.parser')
+        soup = BeautifulSoup(content, 'html.parser', from_encoding="iso-8859-1")
         try:
             return soup.body.find_all(string=re.compile('.*{0}.*'.format(self.keyword)), recursive=True)
         except:

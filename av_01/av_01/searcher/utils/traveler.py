@@ -9,6 +9,7 @@ class Traveler:
     def travel(self, request: Request, depth=0):
         links = request.getLinks()
         if depth == 0:
+            print(request.url, 0)
             self.content.update({request : 0})
                 
                             
