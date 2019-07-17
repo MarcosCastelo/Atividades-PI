@@ -1,0 +1,99 @@
+{% load staticfiles %}
+{% load i18n %}
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content = "widht=device-width, initial-scale=1">
+	<title>ConnectedRakin</title>
+	<link rel="stylesheet" href="{% static 'styles/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'styles/main.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="{% static 'scripts/vendor/jquery-1.9.1.js' %}"></script>
+	<script src="{% static 'scripts/vendor/bootstrap-min.js' %}"></script>
+	<script src="{% static 'scripts/vendor/bootbox.min.js' %}"></script>
+	<script src="{% static 'scripts/vendor/app.js' %}"></script>
+
+
+
+	<meta property="og:url"           content="https://www.SeuSite.com/" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:description"   content="Publicidade" />
+
+
+
+
+</head>
+
+<body style="background-color:">
+	<div class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top">
+		<div class="header">
+			{% if request.user.perfil %}
+
+			<ul class="nav nav-pills pull-right" style="">
+				<li>
+					<div class="container">
+						<form class="form-signin" method="post" action="{% url 'pesquisar' %}">
+
+							{% csrf_token %}
+							<input name="nome" id="nome_id" required placeholder="{% trans   'Pesquisar usuário' %}" style="min-height: 33px; min-width: 300px;">
+							<button class="btn btn-dark btn-lg	" type="submit">{% trans 'Pesquisar' %}</button>
+						</form>
+					</div>
+				</li>
+
+				<li><a href="{% url 'meu_perfil' %}">{{ perfil_logado.nome }}</a></li>
+				<li><a href="/logout/">{% trans 'Logout' %}</a></li>
+			</ul>
+
+			<a href="{% url 'index' %}" style="text-decoration:none">
+
+				<h3 class="text-dark">ConnectedRakin</h3>
+
+			</a>
+
+
+			{% else %}
+			<h3 class="text-dark">ConnectedIn</h3>
+
+			{% endif %}
+
+		</div>
+
+		<div class="row content">
+
+			{% block body %}
+
+
+			{% endblock %}
+		</div>
+	</div>
+
+
+	<footer class="footer mt-auto py-3">
+		<div class="row">
+      <div class="container">
+        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+      <input name="next" type="hidden" value="{{ redirect_to }}">
+			<div class="input-group mb-3">
+				<select name="language" class="custom-select" id="inputGroupSelect01">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+          <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+            {{ language.name_local }} ({{ language.code }})
+          </option>
+        {% endfor %}
+      </select>
+				<input type="submit" value="Traduzir">
+		</div>
+    </form>
+  </div>
+      </div>
+    </footer>
+</body>
+
+</html>

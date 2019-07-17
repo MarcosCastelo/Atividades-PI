@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block body %}
+<div class = "col-lg-9">
+
+    <div class="panel panel-default">
+            
+        
+            {% if perfis %}
+                <div class="panel-heading">
+                    <strong> {{ total }}  
+                        {% blocktrans%} Postagem{{ total|pluralize }} {% endblocktrans %} 
+                    </strong>
+                </div>
+                <ul class="list-group">
+                    {% for perfil in perfis %}
+                        <li class = "list-group-item">
+                                <p>{{ perfil }}
+                            
+                            {% if perfil not in perfil_logado.contatos.all %}
+                                <a class = "btn btn-primary pull-right" href = "{% url 'convidar' perfil.id %}">{% trans 'Convidar' %}</a></p>
+                            {% endif %}
+                            
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <div class="panel-body">
+                    {% trans 'Perfil não encontrado' %}
+                </div>    
+            {% endif %}
+        </div>
+
+</div>
+
+
+{% endblock %}		

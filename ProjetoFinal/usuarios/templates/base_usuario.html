@@ -1,0 +1,26 @@
+{% load staticfiles %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content = "widht=device-width, initial-scale=1">
+	<title>ConnectedRakin</title>
+	<link rel="stylesheet" href="{% static 'styles/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'styles/main.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<script src="{% static 'scripts/vendor/jquery-1.9.1.js' %}"></script>
+	<script src="{% static 'scripts/vendor/bootstrap-min.js' %}"></script>
+	<script src="{% static 'scripts/vendor/bootbox.min.js' %}"></script>
+	<script src="{% static 'scripts/vendor/app.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'styles/signin.css' %}"/>
+
+</head>
+<body>
+	<div class="container">
+		{% block body %}
+		{% endblock %}
+	</div>
+</body>
+</html>
